@@ -108,7 +108,7 @@
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
             </div>
         </li>
-        <li class="nav-item">
+        {{--<li class="nav-item">
             <button id="authorize_button" >Authorize</button>
             <button id="signout_button" >Sign Out</button>
 
@@ -232,7 +232,7 @@
                     onload="this.onload=function(){};handleClientLoad()"
                     onreadystatechange="if (this.readyState === 'complete') this.onload()">
             </script>
-        </li>
+        </li>--}}
         <div class="topbar-divider d-none d-sm-block"></div>
 
         <!-- Nav Item - User Information -->
