@@ -18,7 +18,12 @@
     <script src="{{URL::asset('js/tinymce.js')}}"></script>
     <script>
         tinymce.init({
-            selector: '#post-content'
+            selector: '#post-content', language: 'ru', invalid_elements: 'script,link',
+            protect: [
+                /\<\/?(if|endif)\>/g,  // Protect <if> & </endif>
+                /\<xsl\:[^>]+\>/g,  // Protect <xsl:...>
+                /<\?php.*?\?>/g  // Protect php code
+            ],
         });
     </script>
 </head>

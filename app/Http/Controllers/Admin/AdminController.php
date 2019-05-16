@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use http\Message;
 use Illuminate\Support\Facades\Artisan;
 use App\Category;
 use App\Comment;
@@ -57,7 +58,7 @@ class AdminController extends Controller
     public function dbBackup()
     {
         $arr = [];
-        exec('php C:\xampp\htdocs\blog.local\artisan backup:run',$arr);
+        exec('php C:\xampp\htdocs\blog.local\artisan backup:run --only-db',$arr);
         if (array_search('Backup completed!',$arr)) {
             UINotification::set('success', 'Дамп базы данных создан!');
             Log::info(json_encode($arr));

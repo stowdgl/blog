@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{URL::asset('css/messenger.css')}}">
     <script src="{{URL::asset('js/tinymce.js')}}"></script>
     <link rel="shortcut icon" href="{{URL::asset('images/favicon.ico')}}">
-    <script>tinymce.init({selector:'#post-content',language:'ru'});</script>
+    <script></script>
     <!-- Theme Style -->
     <link rel="stylesheet" href="{{URL::asset('css/style.css')}}">
 </head>

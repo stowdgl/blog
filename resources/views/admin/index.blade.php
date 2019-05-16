@@ -117,7 +117,7 @@
           <div class="row">
 
             <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
+            {{--<div class="col-xl-8 col-lg-7">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
@@ -217,7 +217,7 @@
                     <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
-              </div>
+              </div>--}}
 
               <!-- Color System -->
               <div class="row">
@@ -273,7 +273,7 @@
 
             </div>
 
-            <div class="col-lg-6 mb-4">
+            {{--<div class="col-lg-6 mb-4">
 
               <!-- Illustrations -->
               <div class="card shadow mb-4">
@@ -300,7 +300,7 @@
                 </div>
               </div>
 
-            </div>
+            </div>--}}
           </div>
 
         </div>

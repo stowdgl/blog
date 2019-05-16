@@ -62,11 +62,16 @@
     <div class="sidebar-box">
         <h3 class="heading">Теги</h3>
         <ul class="tags">
-            @if(count($tags)>0)
-            @foreach($tags as $tag)
-            <li><a href="#">{{$tag->title}}</a></li>
-                @endforeach
-                @endif
+
+            {{--@foreach($posts as $post )
+                @foreach($post->tags as $tag)
+            <li><a href="/posts?search-by-tag={{$tag->title}}">{{$tag->title}}</a></li>
+                    @endforeach
+                @endforeach--}}
+                @foreach($tags as $tag)
+                <li><a href="/posts?search-by-tag={{$tag->title}}">{{$tag->title}}</a></li>
+
+            @endforeach
         </ul>
     </div>
 </div>

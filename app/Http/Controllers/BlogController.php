@@ -26,7 +26,7 @@ class BlogController extends Controller
     public function index()
     {
         try {
-            $posts = Post::with('comments', 'users', 'categories')->paginate(8);
+            $posts = Post::with('comments', 'users', 'categories')->orderBy('created_at','DESC')->paginate(8);
             $tags = Tag::with('posts')->get();
             $categories = Category::with('posts')->limit(9)->get();
             foreach ($posts as $post) {
@@ -290,6 +290,11 @@ class BlogController extends Controller
             }
             if ($request['search']) {
                 $posts = Post::with('categories')->where('title', 'LIKE', '%' . $request['search'] . '%')->orderBy('created_at', 'DESC')->paginate(9);
+                foreach ($posts as $post) {
+                    $post->created = Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('F d, Y');
+                }
+            }elseif ($request['search-by-tag']){
+                $posts = Post::with('categories','tags')->where('title', 'LIKE', '%' . $request['search-by-tag'] . '%')->orderBy('created_at', 'DESC')->paginate(9);
                 foreach ($posts as $post) {
                     $post->created = Carbon::createFromFormat('Y-m-d H:i:s', $post->created_at)->format('F d, Y');
                 }
